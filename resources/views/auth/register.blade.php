@@ -23,7 +23,7 @@
     <div class='container'>
 
 <form method="post" action="{{route('register-user')}}" >
-{{ csrf_field()}}
+      @csrf
 
         @if(Session::has('success'))
     <div class="alert-success alert">

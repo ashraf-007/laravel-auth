@@ -19,6 +19,8 @@
 <div class='container'>
 
 <form method="post" action="{{route('login-user')}}" >
+@csrf
+
 @if(Session::has('success'))
     <div class="alert alert-success">
         {{Session::get('success')}}
@@ -31,7 +33,6 @@
     </div>
         @endif
         
-        {{ csrf_field()}}
         <div class='form-group '>
             <label for="email">Enter Email</label>
             <input id='email' type="email" name='email'  class='form-control' value="{{old('email')}}" />
