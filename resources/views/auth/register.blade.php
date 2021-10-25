@@ -51,14 +51,14 @@
             <span class="text-danger">@error('name') {{$message}} @enderror </span>
         </div>
         <div class='form-group '>
-            <label >Enter Email</label>
+            <label >Email address</label>
             <input type="email" name='email'  class='form-control'  value="{{old('email')}}" />
             <span class="text-danger">@error('email') {{$message}} @enderror </span>
 
         </div>
 
         <div class='form-group'>
-            <label >Enter Password</label>
+            <label >Password</label>
             <input  type="password" name='password'  class='form-control' />
 
             <span class="text-danger">@error('password') {{$message}} @enderror </span>
