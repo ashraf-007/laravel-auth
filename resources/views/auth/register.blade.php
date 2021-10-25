@@ -23,6 +23,8 @@
     <div class='container'>
 
 <form method="post" action="{{route('register-user')}}" >
+{{ csrf_field()}}
+
         @if(Session::has('success'))
     <div class="alert-success alert">
         {{Session::get('success')}}
@@ -35,7 +37,6 @@
     </div>
         @endif
 
-        @csrf
 
         <div class='form-group '>
             <label >Name</label>

@@ -26,7 +26,7 @@
     </div>
         @endif
         
-         @csrf
+        {{ csrf_field()}}
         <div class='form-group '>
             <label for="email">Enter Email</label>
             <input id='email' type="email" name='email'  class='form-control' value="{{old('email')}}" />
