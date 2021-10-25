@@ -14,7 +14,9 @@
         margin-top:50px;
         padding:30px;
         width:500px;
-        box-shadow:1px 3px 5px 0px gray;
+        box-shadow:-1px 5px 14px -7px #545454;
+        border:3px solid gray;
+        border-radius:10px;
     }
     .btn{
         margin-bottom:10px;
@@ -24,7 +26,7 @@
 </head>
 <body>
     
-<div class='container'>
+<div class="container">
 <h1>Login</h1>
 
 <form method="post" action="{{route('login-user')}}" >
