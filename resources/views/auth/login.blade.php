@@ -10,13 +10,22 @@
     h1{
         text-align:center;
     }
+    .container{
+        margin-top:50px;
+        padding:30px;
+        width:500px;
+        box-shadow:1px 3px 5px 0px gray;
+    }
+    .btn{
+        margin-bottom:10px;
+    }
 
     </style>
 </head>
 <body>
     
-<h1>Login</h1>
 <div class='container'>
+<h1>Login</h1>
 
 <form method="post" action="{{route('login-user')}}" >
 @csrf
@@ -34,26 +43,25 @@
         @endif
         
         <div class='form-group '>
-            <label for="email">Enter Email</label>
+            <label for="email">Email</label>
             <input id='email' type="email" name='email'  class='form-control' value="{{old('email')}}" />
             <span class="text-danger">@error('email') {{$message}} @enderror </span>
 
         </div>
 
         <div class='form-group'>
-            <label for="password">Enter Passwor</label>
+            <label for="password">Password</label>
             <input id='password' type="password" name='password'  class='form-control' />
             <span class="text-danger">@error('password') {{$message}} @enderror </span>
 
         </div>
     
-        <div class='form-group '>
-            <input type="submit" name='submit' class='form-control' class='btn btn-primary' value='Login'>
-        </div>
+            <button type="submit" name='submit' class='btn btn-primary' value='Login' > Login </button>
 
 
     </form>
-    <a href="register"> New user ? Register</a>
+      
+      <span>Don't have an account ? <a href="register">Register here</a> </span>
 
     </div>
 

@@ -9,18 +9,25 @@
     <title>Document</title>
 </head>
 <style>
-
     h1{
         text-align:center;
-
     }
-</style>
+    .container{
+        margin-top:50px;
+        padding:30px;
+        width:500px;
+        box-shadow:1px 3px 5px 0px gray;
+    }
+    .btn{
+        margin-bottom:10px;
+    }
+
+    </style>
 <body>
 
-<div class='container'>
 
-<h1>Register</h1>
     <div class='container'>
+    <h1>Register</h1>
 
 <form method="post" action="{{route('register-user')}}" >
       @csrf
@@ -51,21 +58,18 @@
         </div>
 
         <div class='form-group'>
-            <label >Enter Passwor</label>
+            <label >Enter Password</label>
             <input  type="password" name='password'  class='form-control' />
 
             <span class="text-danger">@error('password') {{$message}} @enderror </span>
 
         </div>
-        
-        <!-- <div class='form-group '> -->
-            <input type="submit" name='submit' class='form-control' class='btn btn-primary' value='Register'>
-        <!-- </div> -->
+    
+            <button type="submit" name='submit' class='btn btn-primary mb-2' >Register</button>
 
     </form>
-    <a href="login">Already have an account ? Login</a>
+    <span> Already have an account ? <a href="login"> Login</a> </span>
 
-    </div>
     </div>
 
 
